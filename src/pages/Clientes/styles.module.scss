@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 1rem 0;
+        padding: 0.2rem 0.75rem;
+        border: 1px solid #2ed22e;
+        border-radius: 1rem;
+        transition: filter 0.2s;
+
+        img {
+            margin-left: 1rem;
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            filter:brightness(0.8)
+        }
+    }
+    
+    .data {
+        color: #12A454;
+        width:100%;
+        border-spacing: 0 0.5rem;
+        display: flex;
+        justify-content: center;
+
+        table th {
+            background-color:#363f5f;
+            font-weight: normal ;
+            padding: 1rem 2rem;
+            text-align: left;
+        }
+        
+        table thead tr th:first-child, table tbody tr td:first-child  {
+            border-radius: 0.25rem 0 0 0.25rem;
+        }
+        table thead tr th:last-child, table tbody tr td:last-child  {
+            border-radius: 0 0.25rem 0.25rem 0;
+        }
+        
+        table tbody td {
+            background-color: #969cb3;
+            padding: 1rem 2rem;    
+        }
+        
+        table tbody tr {
+            opacity: 0.7;
+        }
+        
+        table tbody tr:hover {
+            opacity: 1;
+        }       
+       
+        
+    }
+    
+}
