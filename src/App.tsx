@@ -5,9 +5,9 @@ import './styles/global.scss';
 
 export default function App(props: any) {
   return (
-    <BrowserRouter>
-      <Routes />
-      <Footer />
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes />
+        <Footer />
+      </BrowserRouter>
   );
 }
