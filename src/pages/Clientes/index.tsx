@@ -3,8 +3,18 @@ import Header from '../../components/Header';
 import ClientForm from '../../components/ClientForm';
 import UserIcon from '../../assets/images/userIcon.png';
 import Styles from './styles.module.scss';
-import Plus from '../../assets/images/plus.svg';
+import Enter from '../../assets/images/entrada.svg';
+import Exit from '../../assets/images/saida.svg';
 import { useState } from 'react';
+
+type ResponseType = {
+    id: number;
+    name: string;
+    email: string;
+    fone1: string;
+    fone2?: string;
+    endereco: string;
+}
 
 export const props = {
     title: 'SISTEMA DE CADASTRO DE CLIENTES',
@@ -12,7 +22,11 @@ export const props = {
     subtitle: 'Aqui poderá fazer consultas, inserções  ou alterações de clientes'
 }
 
-export default function Clientes() {
+export default function Clientes(): JSX.Element {
+
+    const clientData = JSON.parse(String(localStorage.getItem('ClientData'))) || [];
+
+    console.log(clientData)
 
     const [form, setForm] = useState(false)
 
@@ -23,14 +37,13 @@ export default function Clientes() {
             setForm(false);
         }
     }
-    const telefone2 = ''
 
     return (
         <>
             <Header title={props.title} icon={props.icon} subtitle={props.subtitle} />
 
             <div className={Styles.container}>
-                <button onClick={handleOpenForm}>Clientes <img src={Plus} alt="plus" /></button>
+                <button onClick={handleOpenForm}>Clientes <img src={form ? Exit : Enter} alt="plus" /></button>
                 {
                     form ? <ClientForm /> :
                         <section className={Styles.data}>
@@ -45,17 +58,23 @@ export default function Clientes() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>João da Silva</th>
-                                        <th>joajo@mail.com</th>
-                                        <th>(11) 9999-9999</th>
-                                        <th>{telefone2 ? telefone2 : '-'}</th>
-                                        <th>Rua tal numero 5</th>
-                                    </tr>
+                                    {
+                                        clientData &&
+                                            clientData.map((item: ResponseType) => {
+                                                return (
+                                                    <tr key={item.id}>
+                                                        <th>{item.name}</th>
+                                                        <th>{item.email}</th>
+                                                        <th>{item.fone1}</th>
+                                                        <th>{item.fone2 ? item.fone2 : '-'}</th>
+                                                        <th>{item.endereco}</th>
+                                                    </tr>
+                                                )
+                                            })
+                                        }
                                 </tbody>
                             </table>
                         </section>
-
                 }
 
             </div>

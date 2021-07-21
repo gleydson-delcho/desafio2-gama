@@ -1,9 +1,30 @@
 .container {
+    
     display: block;
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-
+    
+    width: 50%;
+    height: 40%;
     background: rgb(0, 0, 0, 0.07);
+    
+    h1 {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .form {
+        padding: 1rem;
+
+        fieldset {
+            border: none;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
