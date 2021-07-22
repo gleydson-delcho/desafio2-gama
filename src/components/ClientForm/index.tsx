@@ -1,6 +1,17 @@
-import React, { FormEvent } from 'react';
-import { useState } from 'react';
+import React, { FormEvent, ReactNode } from 'react';
+import { useState, createContext } from 'react';
 import Styles from './styles.module.scss';
+
+interface ClientContextData {
+    client: {
+        id: number;
+        name: string;
+        email: string;
+        fone1: string;
+        fone2?: string;
+        endereco: string;
+    }
+}
 
 type FormValues = {
     id: number;
@@ -11,7 +22,13 @@ type FormValues = {
     endereco: string;
 }
 
-export default function ClientForm() {
+interface ClientProviderProps {
+    children: ReactNode;
+}
+
+export const ClientContext = createContext({} as ClientContextData);
+
+export default function ClientFormProvider({ children }: ClientProviderProps): JSX.Element {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -56,31 +73,40 @@ export default function ClientForm() {
     }
 
     return (
-        <div className={Styles.container} >
-            <h1>Adicione seus clientes aqui</h1>
-            <form className={Styles.form} onSubmit={handleSubmit} >
-                <fieldset>
-                    <label htmlFor="name">Nome Completo:</label>
-                    <input type="text" value={name} onChange={e => { setName(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="email">E-mail:</label>
-                    <input type="text" value={email} onChange={e => { setEmail(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="fone1">Telefone 1:</label>
-                    <input type="text" value={fone1} onChange={e => { setFone1(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="fone2">Telefone 2:</label>
-                    <input type="text" value={fone2} onChange={e => { setFone2(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="endereco">Endereço:</label>
-                    <input type="text" value={endereco} onChange={e => { setEndereco(e.target.value) }} />
-                </fieldset>
-                <button type="submit" >Salvar</button>
-            </form>
-        </div >
+        <>
+            <div className={Styles.container} >
+                <form className={Styles.form} onSubmit={handleSubmit} >
+                    <h1>Adicione seus clientes aqui</h1>
+                    <fieldset>
+                        <label htmlFor="name">Nome Completo:</label>
+                        <input type="text" value={name} onChange={e => { setName(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="email">E-mail:</label>
+                        <input type="text" value={email} onChange={e => { setEmail(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="fone1">Telefone 1:</label>
+                        <input type="text" value={fone1} onChange={e => { setFone1(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="fone2">Telefone 2:</label>
+                        <input type="text" value={fone2} onChange={e => { setFone2(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="endereco">Endereço:</label>
+                        <input type="text" value={endereco} onChange={e => { setEndereco(e.target.value) }} />
+                    </fieldset>
+                    <button type="submit" >Salvar</button>
+                </form>
+            </div >
+        
+            <ClientContext.Provider value={{
+                client: formValues
+            }}>
+                {children}
+            </ClientContext.Provider>
+        </>
+
     );
 }

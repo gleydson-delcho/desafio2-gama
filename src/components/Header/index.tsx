@@ -9,14 +9,13 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
     return (
-        <div className={Styles.container} >
+        <div className={Styles.containerHeader} >
                 <a href="/">
                     <img src={props.icon} alt="logo" />
                 </a>
             <header className={Styles.header}>
                 <h1>{props.title}</h1>
-                <p>{props.subtitle}</p>
-               
+                <p>{props.subtitle}</p>               
             </header>
         </div>
     );

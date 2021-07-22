@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className={Styles.footer} >
             <span>
                 Desenvolvido com <span><FaHeart color="#a83f39" size="11" /></span> por
-                <strong> Gleydson</strong>
+                <strong>Gleydson</strong>
             </span>
             <p><FaRegCopyright size="11" />Todos os direitos reservados.</p>
         </footer>
