@@ -42,7 +42,9 @@ export default function Produtos() {
                 <div className={Styles.containerContent}>
                     <div className={Styles.content}>
                         <button onClick={handleOpenForm}>Produtos<img src={form ? Exit : Enter} alt="plus" /></button>
-                        {form && <ProductForm />}
+                        {
+                            form && <ProductForm />
+                        }
                         <section className={Styles.data}>
                             <table>
                                 <thead>

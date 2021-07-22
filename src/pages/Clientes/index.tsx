@@ -42,10 +42,9 @@ export default function Clientes(): JSX.Element {
         <>
             <Header title={props.title} icon={props.icon} subtitle={props.subtitle} />
             <div className={Styles.container}>
+                <Navbar />
                 <div className={Styles.containerContent}>
-                    <Navbar />
                     <div className={Styles.content}>
-
                         <button onClick={handleOpenForm}>Clientes <img src={form ? Exit : Enter} alt="plus" /></button>
                         {
                             form && <ClientForm children />
