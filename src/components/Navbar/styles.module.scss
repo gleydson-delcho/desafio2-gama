@@ -1,0 +1,29 @@
+aside {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    height: calc(100vh - 12rem);
+    width: 10%;
+    background: #d5d5d5;
+
+    a {
+
+        width: 6rem;
+        padding: 0.6rem;
+        background: #000;
+        border-radius: 0.2rem;
+
+        margin: 0.4rem 0;
+        text-decoration: none;
+        color: #fff;
+        transition: filter 0.3s;
+
+
+        &:hover {
+            filter: brightness(0.4);
+        }
+    }
+
+}
