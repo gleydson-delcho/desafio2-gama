@@ -1,53 +1,53 @@
 {
-    "produtos": [
-        {
-            "id": 1,
-            "name": "Removedor - Body Compound",
-            "description": "Remove arranhões leves e anexos persistentes, tais como cola, alcatrão, excrementos de aves, etc, sobre a superfície da tinta, sem prejudicar a superfície da tinta.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/1724124711/imagens/removedor-de-manchas-e-arranhoes-de-carros-body-compound/1724124711_1_large.jpg",
-            "price": 35.12
-        },
-        {
-            "id": 2,
-            "name": "Lava e encera - Dry Limp",
-            "description": "Promove a limpeza de superfícies através da fragmentação e cristalização da sujeira que, encapsulada pela cera vegetal, pode ser facilmente removida com baixo atrito, não riscando a superfície aplicada.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/2812876/1/2812876139_1GG.jpg",
-            "price": 24.90
-        },
-        {
-            "id": 3,
-            "name": "Ecomais Carros Verde",
-            "description": "Econômico e sustentável: Faz toda a limpeza com único produto, desobrigando o uso de produtos de limpeza convencionais. Mais limpeza, menos rejeitos..",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/3272627/9/3272627923_1GG.jpg",
-            "price": 16.00
-        },
-        {
-            "id": 4,
-            "name": "Ecomais Limpa Pisos Interno Azul P",
-            "description": "Limpeza excepcional, sem resíduos, sem pelos e sem poluição do meio ambiente.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/3305916/2/3305916247_1GG.jpg",
-            "price": 24.00
-        },
-        {
-            "id": 5,
-            "name": "Kit 5 escovas de lacuna ",
-            "description": "Carro detalhando Lacunas escova de limpeza Natural escovas de cabelo Auto Tools Detalhes Produtos 5Pcs Rodas Painel Acessórios Car-styling.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/3213596143/imagens/carro-detalhando-lacunas-escova-de-limpeza-natural-escovas-de-cabelo-auto-tools-detalhes-produtos-5pcs-rodas-painel-acessorios-car-styling/3213596143_1_large.jpg",
-            "price": 196.22
-        },
-        {
-            "id": 6,
-            "name": "Carro anchi Janela Lubrificante",
-            "description": "Este produto é apropriado para a borracha tira de janela de automóveis, fechadura de porta, fecho de correr, do assento, de metal, vidro, vinil, de madeira e de pintura.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/3087931413/imagens/carro-anchi-porta-e-janela-de-elevacao-limpeza-agente-redutor-agente-de-vedacao-de-borrachamundo-colorido/3087931413_1_large.jpg",
-            "price": 106.53
-        },
-        {
-            "id": 7,
-            "name": "Removedor - Body Compound",
-            "description": "Remove arranhões leves e anexos persistentes, tais como cola, alcatrão, excrementos de aves, etc, sobre a superfície da tinta, sem prejudicar a superfície da tinta.",
-            "thumbnail": "https://images-americanas.b2w.io/produtos/1724124711/imagens/removedor-de-manchas-e-arranhoes-de-carros-body-compound/1724124711_1_large.jpg",
-            "price": 35.12
-        }
-    ]
+  "produtos": [
+    {
+      "id": 1,
+      "name": "Removedor - Body Compound",
+      "description": "Remove arranhões leves e anexos persistentes, tais como cola, alcatrão, excrementos de aves, etc, sobre a superfície da tinta, sem prejudicar a superfície da tinta.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/1724124711/imagens/removedor-de-manchas-e-arranhoes-de-carros-body-compound/1724124711_1_large.jpg",
+      "price": 35.12
+    },
+    {
+      "id": 2,
+      "name": "Lava e encera - Dry Limp",
+      "description": "Promove a limpeza de superfícies através da fragmentação e cristalização da sujeira que, encapsulada pela cera vegetal, pode ser facilmente removida com baixo atrito, não riscando a superfície aplicada.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/2812876/1/2812876139_1GG.jpg",
+      "price": 24.9
+    },
+    {
+      "id": 3,
+      "name": "Ecomais Carros Verde",
+      "description": "Econômico e sustentável: Faz toda a limpeza com único produto, desobrigando o uso de produtos de limpeza convencionais. Mais limpeza, menos rejeitos..",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/3272627/9/3272627923_1GG.jpg",
+      "price": 16
+    },
+    {
+      "id": 4,
+      "name": "Ecomais Limpa Pisos Interno Azul P",
+      "description": "Limpeza excepcional, sem resíduos, sem pelos e sem poluição do meio ambiente.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/01/00/img/3305916/2/3305916247_1GG.jpg",
+      "price": 24
+    },
+    {
+      "id": 5,
+      "name": "Kit 5 escovas de lacuna ",
+      "description": "Carro detalhando Lacunas escova de limpeza Natural escovas de cabelo Auto Tools Detalhes Produtos 5Pcs Rodas Painel Acessórios Car-styling.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/3213596143/imagens/carro-detalhando-lacunas-escova-de-limpeza-natural-escovas-de-cabelo-auto-tools-detalhes-produtos-5pcs-rodas-painel-acessorios-car-styling/3213596143_1_large.jpg",
+      "price": 196.22
+    },
+    {
+      "id": 6,
+      "name": "Carro anchi Janela Lubrificante",
+      "description": "Este produto é apropriado para a borracha tira de janela de automóveis, fechadura de porta, fecho de correr, do assento, de metal, vidro, vinil, de madeira e de pintura.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/3087931413/imagens/carro-anchi-porta-e-janela-de-elevacao-limpeza-agente-redutor-agente-de-vedacao-de-borrachamundo-colorido/3087931413_1_large.jpg",
+      "price": 106.53
+    },
+    {
+      "id": 7,
+      "name": "Removedor - Body Compound",
+      "description": "Remove arranhões leves e anexos persistentes, tais como cola, alcatrão, excrementos de aves, etc, sobre a superfície da tinta, sem prejudicar a superfície da tinta.",
+      "thumbnail": "https://images-americanas.b2w.io/produtos/1724124711/imagens/removedor-de-manchas-e-arranhoes-de-carros-body-compound/1724124711_1_large.jpg",
+      "price": 35.12
+    }
+  ]
 }

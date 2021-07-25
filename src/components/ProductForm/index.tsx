@@ -10,6 +10,8 @@ type FormValues = {
     quantity: number;
 }
 
+
+
 export default function ProductForm() {
 
     const [name, setName] = useState('');
@@ -30,7 +32,7 @@ export default function ProductForm() {
         id: productData.length + 1,
         name,
         local,
-        price: `R$ ${price.toString().replace('.', ',')}`,
+        price: `R$ ${price.toFixed(2).toString().replace('.', ',')}`,
         quantity
     }
 
@@ -45,34 +47,35 @@ export default function ProductForm() {
         } else {
             productData.push(formValues);
             localStorage.setItem('ProductData', JSON.stringify(productData));
+            alert('Seus dados foram salvos!');
             initialValues();
         }
     }
     return (
         <>
-        <div className={Styles.container} >
-            <form className={Styles.form} onSubmit={handleSubmit} >
-            <h1>Adicione seus produtos aqui</h1>
-                <fieldset>
-                    <label htmlFor="name">Nome Completo:</label>
-                    <input type="text" value={name} onChange={e => { setName(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="local">Endereço do estoque:</label>
-                    <input type="text" value={local} onChange={e => { setLocal(e.target.value) }} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="price">Preço:</label>
-                    <input step="0.01" type="number" value={price} min="0"
-                        onChange={e => { setPrice(Number(e.target.value))}} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="quantity">Quantidade:</label>
-                    <input type="text" value={quantity} onChange={e => { setQuantity(Number(e.target.value)) }} />
-                </fieldset>
-                <button type="submit" >Salvar</button>
-            </form>
-        </div >
+            <div className={Styles.container} >
+                <form className={Styles.form} onSubmit={handleSubmit} >
+                    <h1>Adicione seus produtos aqui</h1>
+                    <fieldset>
+                        <label htmlFor="name">Nome Completo:</label>
+                        <input type="text" value={name} onChange={e => { setName(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="local">Endereço do estoque:</label>
+                        <input type="text" value={local} onChange={e => { setLocal(e.target.value) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="price">Preço:</label>
+                        <input step="0.01" type="number" value={price} min="0"
+                            onChange={e => { setPrice(Number(e.target.value)) }} />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="quantity">Quantidade:</label>
+                        <input type="text" value={quantity} onChange={e => { setQuantity(Number(e.target.value)) }} />
+                    </fieldset>
+                    <button type="submit" >Salvar</button>
+                </form>
+            </div >
         </>
     );
 }

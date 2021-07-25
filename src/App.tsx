@@ -4,10 +4,10 @@ import Routes from './Routes';
 import './styles/global.scss';
 
 export default function App() {
-  return (  
+  return ( 
       <BrowserRouter>
         <Routes />   
         <Footer />   
-      </BrowserRouter>
+      </BrowserRouter> 
   );
 }
