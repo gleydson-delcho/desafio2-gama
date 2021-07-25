@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    
+    .containerContent { 
+        display: flex; 
+        justify-content: center;
+        .content {
+            display: flex; 
+            align-items: center;
+            flex-direction: column;
+            margin: 2rem 0 0 8rem;
+
+            form {
+
+                margin: 2rem 0 0 0;
+                padding: 1rem;
+                border: 1px solid #2ed22e;
+                border-radius: 1rem;
+
+                fieldset {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border: none;
+                    margin: 1rem;
+
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+            
+                    margin: 1rem 0;
+                    padding: 0.2rem 0.75rem;
+                    border: 1px solid #2ed22e;
+                    border-radius: 1rem;
+                    transition: filter 0.2s;                   
+            
+                    &:hover {
+                        cursor: pointer;
+                        filter:brightness(0.8)
+                    }
+                }
+            }
+        }    
+
+        
+        
+
+    }
+
+    
+}
