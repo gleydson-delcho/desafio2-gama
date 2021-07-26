@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header';
 import HomeIcon from '../../assets/images/homeIcon.png';
 import Navbar from '../../components/Navbar';
 import Styles from './styles.module.scss';
+import Json from '../../server.json';
 import Cart from '../../assets/images/shopping-cart.png';
-import { api } from '../../api/api';
-import { useHistory } from 'react-router-dom';
 
 export const props = {
     title: 'SISTEMA DE GERENCIAMENTO DE CADASTROS',
@@ -24,16 +24,14 @@ type Products = {
 export default function Home(): JSX.Element {
 
     const history = useHistory();
-    const [allProducts, setAllProducts] = useState<Products[]>();
+    const [allProducts, setAllProducts] = useState<Products[] >();
 
     useEffect(() => {
-
         const Response = async () => {
-            const data = await api.get('produtos');
+            const data = await Json.produtos
 
-            const products = data.data;
+            const products: any = data;
             setAllProducts(products);
-
         }
         Response();
     }, [])

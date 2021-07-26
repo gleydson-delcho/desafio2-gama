@@ -2,6 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import { api } from '../../api/api';
 import HomeIcon from '../../assets/images/homeIcon.png';
 import Header from '../../components/Header';
+import Json from '../../server.json';
 import Navbar from '../../components/Navbar';
 import Styles from './styles.module.scss';
 
@@ -63,8 +64,8 @@ export default function Store() {
         setClients(clientData)
 
         const Response = async () => {
-            const data = await api.get('produtos');
-            const products = data.data;
+            const data = await Json.produtos;
+            const products = data;
             setAllProducts(products);
         }
         Response();
