@@ -1,5 +1,4 @@
 import React, { FormEvent, useEffect, useState } from 'react';
-import { api } from '../../api/api';
 import HomeIcon from '../../assets/images/homeIcon.png';
 import Header from '../../components/Header';
 import Json from '../../server.json';
